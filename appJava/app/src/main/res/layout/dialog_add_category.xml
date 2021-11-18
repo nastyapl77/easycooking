@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#DDD"
+    android:paddingBottom="50dp">
+
+    <TextView
+        android:id="@+id/text_for_add_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Название новой категории:"
+        android:textColor="#000" />
+
+    <EditText
+        android:id="@+id/edit_for_add_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_for_add_category"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/text_for_add_category_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_for_add_category"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Прикрепите фотографию:"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/edit_for_add_category_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_for_add_category_photo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="#000"
+        android:text="Выбрать..."
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@drawable/shape_to_category"/>
+    <TextView
+        android:id="@+id/text_for_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_for_add_category_photo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="#000"
+        android:text="Отмена"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@drawable/shape_to_category"/>
+    <TextView
+        android:id="@+id/text_for_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_for_cancel"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="#000"
+        android:text="Загрузить"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@drawable/shape_to_category"/>
+
+</RelativeLayout>

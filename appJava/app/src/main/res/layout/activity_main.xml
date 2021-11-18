@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#DDD">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/main_add_new_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/shape_to_button"
+                android:paddingStart="20dp"
+                android:gravity="center"
+
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="Добавить" />
+
+            <EditText
+                android:id="@+id/main_search_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/main_add_new_recipe"
+                android:background="@drawable/shape_to_search"
+                android:drawableStart="@drawable/icon_search"
+                android:drawablePadding="10dp"
+                android:fontFamily="monospace"
+                android:hint="Поиск..."
+                android:inputType="text"
+                android:paddingStart="5dp"
+                android:textColor="#FFF"
+                android:textColorHint="#FFF"
+                android:focusable="auto" />
+
+            <RelativeLayout
+                android:id="@+id/relative_to_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_search_recipe"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp">
+
+                <ImageView
+                    android:id="@+id/main_star_img"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_profile" />
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/main_star_img"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="Профиль"
+                    android:textColor="#000" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_to_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_search_recipe"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="0dp"
+                android:layout_toStartOf="@+id/relative_to_profile">
+
+                <ImageView
+                    android:id="@+id/main_profile_img"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_star" />
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/main_profile_img"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="Избранное"
+                    android:textColor="#000" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/main_text_for_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_search_recipe"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="monospace"
+                android:text="Категории"
+                android:textColor="#000"
+                android:textSize="25sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_to_countries"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/main_text_for_category"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="0dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_to_cats"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/recycler_to_countries"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginTop="25dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

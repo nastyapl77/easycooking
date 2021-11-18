@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginActivity"
+    android:background="#DDD">
+
+    <TextView
+        android:id="@+id/login_txt_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="Авторизация"
+        android:textColor="#000"
+        android:textSize="25sp"
+        android:fontFamily="monospace"
+        android:gravity="center" />
+
+
+    <TextView
+        android:id="@+id/login_txt_reg_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/login_txt_log"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/login_edt_reg_phone"
+        android:fontFamily="monospace"
+        android:gravity="center|left"
+        android:text="Телефон"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/login_edt_reg_phone"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/login_txt_log"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="#000"
+        android:inputType="phone"
+        android:background="@drawable/shape_to_edit" />
+
+    <TextView
+        android:id="@+id/login_txt_reg_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/login_txt_reg_phone"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/login_edt_reg_phone"
+        android:fontFamily="monospace"
+        android:gravity="center|left"
+        android:text="Пароль"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/login_edt_reg_pass"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/login_txt_reg_phone"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="#000"
+        android:inputType="textPassword"
+        android:background="@drawable/shape_to_edit" />
+
+    <TextView
+        android:id="@+id/login_txt_click_login"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/login_edt_reg_pass"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Войти"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:background="@drawable/shape_to_edit"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <ImageView
+        android:id="@+id/login_img_to_down_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_txt_click_login"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/background_down_reg"  />
+
+</RelativeLayout>
