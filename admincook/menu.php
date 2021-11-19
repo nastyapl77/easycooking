@@ -25,7 +25,7 @@
                                 <a href="#"><i class="glyphicon glyphicon-plus"></i><span> Accordion Menu</span></a>
                                 <ul class="nav nav-pills nav-stacked">
                                     <li><a href="#">Child Menu 1</a></li>
-                                    
+                                    <li><a href="#">Child Menu 2</a></li>
                                 </ul>
                             </li>
                             <li><a class="ajax-link" href="calendar.php"><i class="glyphicon glyphicon-calendar"></i><span> Calendar</span></a>
