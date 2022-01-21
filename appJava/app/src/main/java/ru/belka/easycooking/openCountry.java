@@ -35,10 +35,9 @@ import java.util.ArrayList;
 
 public class openCountry extends AppCompatActivity {
     long country_id;
-    String resipec;
     JSONArray jArray;
     TextView button_edit_photo;
-    int REQUEST_CODE_PERMISSION_READ_EXTERNAL = 2500;
+    final int REQUEST_CODE_PERMISSION_READ_EXTERNAL = 2500;
     Uri selectedImage = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +62,6 @@ public class openCountry extends AppCompatActivity {
         findViewById(R.id.main_add_new_recipe).setOnClickListener(v -> showDialog());
 
 
-        /*temp = cd.getCache("recc" + category_id + ".json", this);
-        if(!temp.equals("error")) setRecipes(temp);*/
     }
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -99,7 +96,7 @@ public class openCountry extends AppCompatActivity {
     public void loadToSite(String name, String text, String time) {
         assert selectedImage != null;
         String url = "https://kursach.allrenter.ru/webcook/create_recipe.php?name=" + name + "&text=" + text + "&time=" + time + "&coun=" + country_id;
-        new FilesUploadingTask(getRealPathFromURI(openCountry.this, selectedImage), url, openCountry.this, name).execute();
+        new FilesUploadingTask(getRealPathFromURI(openCountry.this, selectedImage), url, openCountry.this).execute();
     }
     public static String getRealPathFromURI(Context context, Uri contentURI) {
         String result = null;
@@ -161,7 +158,6 @@ public class openCountry extends AppCompatActivity {
     private void setRecipes(String result) {
         cacheData cd = new cacheData();
         cd.saveCache("countryr" + country_id + ".json", result, this);
-        resipec = result;
         RecyclerView recycler = findViewById(R.id.recycler_to_recipes);
         ArrayList<dataCategory> data=new ArrayList<>();
         try {

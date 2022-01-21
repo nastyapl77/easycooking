@@ -17,7 +17,8 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:src="@drawable/shape_to_category"
-        android:scaleType="fitXY" />
+        android:scaleType="fitXY"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/item_country_text"
