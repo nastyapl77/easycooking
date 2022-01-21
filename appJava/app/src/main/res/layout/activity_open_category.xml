@@ -75,7 +75,8 @@
                     android:id="@+id/main_star_img"
                     android:layout_width="80dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/icon_profile" />
+                    android:src="@drawable/icon_profile"
+                    android:contentDescription="TODO" />
 
                 <TextView
                     android:layout_width="80dp"
@@ -101,7 +102,8 @@
                     android:id="@+id/main_profile_img"
                     android:layout_width="80dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/icon_star" />
+                    android:src="@drawable/icon_star"
+                    android:contentDescription="TODO" />
 
                 <TextView
                     android:layout_width="80dp"
