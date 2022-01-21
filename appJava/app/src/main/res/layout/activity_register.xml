@@ -52,7 +52,8 @@
         android:paddingEnd="10dp"
         android:textColor="#000"
         android:inputType="text"
-        android:background="@drawable/shape_to_edit" />
+        android:background="@drawable/shape_to_edit"
+        android:autofillHints="" />
     <TextView
         android:id="@+id/register_txt_reg_family"
         android:layout_width="wrap_content"
@@ -81,7 +82,8 @@
         android:paddingEnd="10dp"
         android:textColor="#000"
         android:inputType="text"
-        android:background="@drawable/shape_to_edit" />
+        android:background="@drawable/shape_to_edit"
+        android:autofillHints="" />
 
 
     <TextView
@@ -112,10 +114,10 @@
         android:paddingEnd="10dp"
         android:textColor="#000"
         android:inputType="phone"
-        android:background="@drawable/shape_to_edit" />
+        android:background="@drawable/shape_to_edit"
+        android:autofillHints="" />
 
     <TextView
-        android:id="@+id/register_txt_reg_pass"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_below="@+id/register_txt_reg_phone"
@@ -142,7 +144,8 @@
         android:paddingEnd="10dp"
         android:textColor="#000"
         android:inputType="textPassword"
-        android:background="@drawable/shape_to_edit" />
+        android:background="@drawable/shape_to_edit"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/register_txt_click_register"
@@ -164,7 +167,6 @@
         android:focusable="true" />
 
     <ImageView
-        android:id="@+id/register_img_to_down_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_txt_click_register"

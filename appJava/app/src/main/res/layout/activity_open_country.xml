@@ -58,7 +58,8 @@
                 android:paddingStart="5dp"
                 android:textColor="#FFF"
                 android:textColorHint="#FFF"
-                android:focusable="auto" />
+                android:focusable="auto"
+                android:autofillHints="" />
 
             <RelativeLayout
                 android:id="@+id/relative_to_profile"

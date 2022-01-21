@@ -21,7 +21,6 @@
         android:contentDescription="TODO" />
 
     <TextView
-        android:id="@+id/main_text_recipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/main_image_rectangle"

@@ -42,7 +42,8 @@
                 android:inputType="text"
                 android:paddingStart="5dp"
                 android:textColor="#FFF"
-                android:textColorHint="#FFF" />
+                android:textColorHint="#FFF"
+                android:autofillHints="" />
 
             <TextView
                 android:id="@+id/star_text_for_category"
