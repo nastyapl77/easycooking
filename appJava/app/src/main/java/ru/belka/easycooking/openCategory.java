@@ -43,7 +43,7 @@ public class openCategory extends AppCompatActivity {
     String resipec;
     JSONArray jArray = null;
     TextView button_edit_photo;
-    int REQUEST_CODE_PERMISSION_READ_EXTERNAL = 2500;
+    final int REQUEST_CODE_PERMISSION_READ_EXTERNAL = 2500;
     Uri selectedImage = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

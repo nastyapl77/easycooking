@@ -59,7 +59,7 @@ public class FilesUploadingTask extends AsyncTask<Void, Void, String> {
             outputStream.writeBytes(lineEnd);
 
             // Поток для считывания файла в оперативную память
-            FileInputStream fileInputStream = new FileInputStream(new File(filePath));
+            FileInputStream fileInputStream = new FileInputStream(filePath);
 
             int bytesAvailable = fileInputStream.available();
             int maxBufferSize = 1024 * 1024;

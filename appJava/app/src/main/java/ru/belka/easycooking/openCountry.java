@@ -37,7 +37,7 @@ public class openCountry extends AppCompatActivity {
     long country_id;
     JSONArray jArray;
     TextView button_edit_photo;
-    int REQUEST_CODE_PERMISSION_READ_EXTERNAL = 2500;
+    final int REQUEST_CODE_PERMISSION_READ_EXTERNAL = 2500;
     Uri selectedImage = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,8 +62,6 @@ public class openCountry extends AppCompatActivity {
         findViewById(R.id.main_add_new_recipe).setOnClickListener(v -> showDialog());
 
 
-        /*temp = cd.getCache("recc" + category_id + ".json", this);
-        if(!temp.equals("error")) setRecipes(temp);*/
     }
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

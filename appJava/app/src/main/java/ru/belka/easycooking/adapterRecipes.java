@@ -18,7 +18,7 @@ import java.util.List;
 public class adapterRecipes extends RecyclerView.Adapter {
     final private Context context;
     final private LayoutInflater inflater;
-    List<dataCategory> data;
+    final List<dataCategory> data;
     public adapterRecipes(Context context, List<dataCategory> data){
         this.context=context;
         inflater= LayoutInflater.from(context);
@@ -53,8 +53,10 @@ public class adapterRecipes extends RecyclerView.Adapter {
         return data.size();
     }
     static class MyHolder extends RecyclerView.ViewHolder{
-        ImageView img;
-        TextView txt, txt2, txt3;
+        final ImageView img;
+        final TextView txt;
+        final TextView txt2;
+        final TextView txt3;
 
         public MyHolder(View itemView) {
             super(itemView);

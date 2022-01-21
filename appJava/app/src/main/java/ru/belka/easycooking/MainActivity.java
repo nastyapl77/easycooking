@@ -36,7 +36,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     JSONArray jArray, bArray = null;
     String cats;
-    int REQUEST_CODE_PERMISSION_READ_EXTERNAL = 2500;
+    final int REQUEST_CODE_PERMISSION_READ_EXTERNAL = 2500;
     Uri selectedImage = null;
     TextView button_edit_photo;
     @Override

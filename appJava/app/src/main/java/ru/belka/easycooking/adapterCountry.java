@@ -16,7 +16,7 @@ import java.util.List;
 public class adapterCountry extends RecyclerView.Adapter {
     final private Context context;
     final private LayoutInflater inflater;
-    List<dataCategory> data;
+    final List<dataCategory> data;
     public adapterCountry(Context context, List<dataCategory> data){
         this.context=context;
         inflater= LayoutInflater.from(context);
@@ -48,9 +48,9 @@ public class adapterCountry extends RecyclerView.Adapter {
         return data.size();
     }
     static class MyHolder extends RecyclerView.ViewHolder{
-        ImageView img;
-        TextView txt;
-        View main;
+        final ImageView img;
+        final TextView txt;
+        final View main;
         public MyHolder(View itemView) {
             super(itemView);
             main = itemView;
