@@ -55,10 +55,9 @@ public class adapterRecipes extends RecyclerView.Adapter {
     static class MyHolder extends RecyclerView.ViewHolder{
         ImageView img;
         TextView txt, txt2, txt3;
-        View main;
+
         public MyHolder(View itemView) {
             super(itemView);
-            main = itemView;
             img = itemView.findViewById(R.id.image_to_item_recipe);
             txt = itemView.findViewById(R.id.txt_to_item_recipe);
             txt2 = itemView.findViewById(R.id.txt_to_item_recipe_time);

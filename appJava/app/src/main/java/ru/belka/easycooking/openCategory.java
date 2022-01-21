@@ -214,7 +214,7 @@ public class openCategory extends AppCompatActivity {
     public void loadToSite(String name, String text, String time) {
         assert selectedImage != null;
         String url = "https://kursach.allrenter.ru/webcook/create_recipe.php?name=" + name + "&text=" + text + "&time=" + time + "&cat=" + category_id;
-        new FilesUploadingTask(getRealPathFromURI(openCategory.this, selectedImage), url, openCategory.this, name).execute();
+        new FilesUploadingTask(getRealPathFromURI(openCategory.this, selectedImage), url, openCategory.this).execute();
     }
     public static String getRealPathFromURI(Context context, Uri contentURI) {
         String result = null;
