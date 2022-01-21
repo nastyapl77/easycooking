@@ -14,12 +14,11 @@ public class FilesUploadingTask extends AsyncTask<Void, Void, String> {
     public static final String FORM_FILE_NAME = "photo";
     @SuppressLint("StaticFieldLeak")
     public static Context context;
-    public String load_id;
-    public FilesUploadingTask(String filePath, String urlTo, Context context, String load_id) {
+
+    public FilesUploadingTask(String filePath, String urlTo, Context context) {
         this.filePath = filePath;
         API_FILES_UPLOADING_PATH = urlTo;
         FilesUploadingTask.context = context;
-        this.load_id = load_id;
     }
 
     @Override
@@ -60,7 +59,7 @@ public class FilesUploadingTask extends AsyncTask<Void, Void, String> {
             outputStream.writeBytes(lineEnd);
 
             // Поток для считывания файла в оперативную память
-            FileInputStream fileInputStream = new FileInputStream(new File(filePath));
+            FileInputStream fileInputStream = new FileInputStream(filePath);
 
             int bytesAvailable = fileInputStream.available();
             int maxBufferSize = 1024 * 1024;

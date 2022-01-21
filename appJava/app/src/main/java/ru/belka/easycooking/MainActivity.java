@@ -14,7 +14,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -26,21 +25,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.TimeoutError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     JSONArray jArray, bArray = null;
-    String cats, countries;
-    int REQUEST_CODE_PERMISSION_READ_EXTERNAL = 2500;
+    String cats;
+    final int REQUEST_CODE_PERMISSION_READ_EXTERNAL = 2500;
     Uri selectedImage = null;
     TextView button_edit_photo;
     @Override
@@ -109,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
     public void setCountry(String result) {
         cacheData cd = new cacheData();
         cd.saveCache("country.json", result, this);
-        countries = result;
         RecyclerView recycler = findViewById(R.id.recycler_to_countries);
         ArrayList<dataCategory> data=new ArrayList<>();
         try {
@@ -199,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
     public void loadToSite(String name) {
         assert selectedImage != null;
         String url = "https://kursach.allrenter.ru/webcook/loadimage.php?name=" + name;
-        new FilesUploadingTask(getRealPathFromURI(MainActivity.this, selectedImage), url, MainActivity.this, name).execute();
+        new FilesUploadingTask(getRealPathFromURI(MainActivity.this, selectedImage), url, MainActivity.this).execute();
     }
     public static String getRealPathFromURI(Context context, Uri contentURI) {
         String result = null;
